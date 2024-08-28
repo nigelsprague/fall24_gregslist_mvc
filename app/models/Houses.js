@@ -22,12 +22,16 @@ export class House {
             </div>
             <div class="">
               <div class="p-2">
-                <h2>$${this.price}</h2>
+                <h2>$${this.priceAsCurrency}</h2>
                 <p class="fs-5">${this.bedrooms} | ${this.bathrooms} | ${this.sqft} | ${this.year}</p>
                 <p>${this.description}</p>
               </div>
             </div>
           </section>
         </div>`
+  }
+
+  get priceAsCurrency() {
+    return new Intl.NumberFormat().format(this.price)
   }
 }
