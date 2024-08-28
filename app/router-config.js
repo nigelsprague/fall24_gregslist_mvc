@@ -1,6 +1,8 @@
-import { CarsController } from "./controllers/CarsController.js";
-import { ExamplesController } from "./controllers/ExamplesController.js";
 import { HomeController } from "./controllers/HomeController.js";
+import { CarsController } from "./controllers/CarsController.js";
+import { HousesController } from "./controllers/HousesController.js";
+import { JobsController } from "./controllers/JobsController.js";
+import { ExamplesController } from "./controllers/ExamplesController.js";
 import { Router } from "./utils/Router.js";
 
 
@@ -19,5 +21,15 @@ export const router = new Router([
     path: '#/cars',
     controllers: [CarsController],
     view: 'app/views/CarsView.html'
+  },
+  {
+    path: '#/houses',
+    controllers: [HousesController],
+    view: 'app/views/HousesView.html'
+  },
+  {
+    path: '#/jobs',
+    controllers: [JobsController],
+    view: 'app/views/JobsView.html'
   }
 ])

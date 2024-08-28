@@ -5,6 +5,12 @@
   object-fit: cover;
 }
 
+.house-img {
+  height: 30vh;
+  width: 100%;
+  object-fit: cover;
+}
+
 .car-border {
   border: 3px solid;
 }
