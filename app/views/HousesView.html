@@ -7,14 +7,9 @@
     </div>
   </section>
   <section class="row">
-    <!-- <div class="col-2">
-      <form onsubmit="app.HousesController.createHouse()" class="form-control">
-
-      </form>
-    </div> -->
     <div class="col-md-12">
       <section id="house-listings" class="row m-0 gx-5">
-        <div class="col-md-6">
+        <div class="col-md-6 mb-4">
           <section class="row bg-light shadow">
             <div class="p-0">
               <img class="img-fluid house-img"
@@ -33,4 +28,69 @@
     </div>
   </section>
 
+  <section class="row justify-content-end mb-3 mx-2 fixed-bottom">
+    <div class="col-1 p-0">
+      <button type="button" class="btn btn-primary p-0 px-2" data-bs-toggle="modal" data-bs-target="#addHouseModal"
+        title="Add a listing"><i class="mdi mdi-plus-circle-outline fs-1"></i></button>
+    </div>
+  </section>
+
+  <div class="modal fade" id="addHouseModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Add House</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form onsubmit="app.HousesController.createHouse()">
+            <div class="container-fluid">
+              <section class="row justify-content-between">
+                <div class="col mb-2">
+                  <label for="bedrooms">Bedrooms</label>
+                  <input id="bedrooms" name="bedrooms" type="number" required min="1" max="35" placeholder="1">
+                </div>
+                <div class="col mb-2">
+                  <label for="bathrooms">Bathrooms</label>
+                  <input id="bathrooms" name="bathrooms" type="number" required min=".5" max="25" placeholder="1">
+                </div>
+                <div class="col mb-2">
+                  <label for="sqft">Square Footage</label>
+                  <input id="sqft" name="sqft" type="number" required min="1" max="150,000" placeholder="1,000">
+                </div>
+              </section>
+              <section class="row">
+                <div class="col mb-2">
+                  <label for="year">Year Built</label>
+                  <input id="year" name="year" type="number" required min="1800" max="2024" placeholder="2024">
+                </div>
+                <div class="col mb-2">
+                  <label for="price">Price</label>
+                  <input id="price" name="price" type="number" required min="1" max="10000000" placeholder="$100,000">
+                </div>
+                <div class="col mb-2">
+                  <label for="imgUrl">Image</label>
+                  <input id="imgUrl" name="imgUrl" type="url" required maxlength="2000" placeholder="House image Url">
+                </div>
+              </section>
+              <section class="row m-0">
+                <label class="p-0" for="description">Description of House</label>
+                <div class="col-12 mb-2">
+                  <section class="row">
+                    <textarea name="description" id="description" placeholder="About the house" rows="5"
+                      maxlength="5000"></textarea>
+                  </section>
+                </div>
+                <button type="submit" class="col btn btn-primary mt-2 mb-3 align-self-end">Submit</button>
+              </section>
+            </div>
+          </form>
+          <div class="modal-footer pb-0">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

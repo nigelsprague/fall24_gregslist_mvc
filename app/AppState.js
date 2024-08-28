@@ -51,6 +51,24 @@ class ObservableAppState extends EventEmitter {
       price: 375000,
       description: 'Newly renovated mid-century modern home',
       imgUrl: 'https://photos.zillowstatic.com/fp/eb55c9c3a45243a6cea1e43c9fb53a68-p_d.jpg'
+    }),
+    new House({
+      year: '1974',
+      bedrooms: 3,
+      bathrooms: 2.5,
+      sqft: 1400,
+      price: 375000,
+      description: 'Newly renovated mid-century modern home',
+      imgUrl: 'https://photos.zillowstatic.com/fp/eb55c9c3a45243a6cea1e43c9fb53a68-p_d.jpg'
+    }),
+    new House({
+      year: '1974',
+      bedrooms: 3,
+      bathrooms: 2.5,
+      sqft: 1400,
+      price: 375000,
+      description: 'Newly renovated mid-century modern home',
+      imgUrl: 'https://photos.zillowstatic.com/fp/eb55c9c3a45243a6cea1e43c9fb53a68-p_d.jpg'
     })
   ]
 }

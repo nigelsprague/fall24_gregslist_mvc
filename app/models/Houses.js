@@ -14,7 +14,7 @@ export class House {
 
   get houseHTMLTemplate() {
     return `
-    <div class="col-md-6">
+    <div class="col-md-6 mb-4">
           <section class="row bg-light shadow">
             <div class="p-0">
               <img class="img-fluid house-img"
@@ -22,8 +22,9 @@ export class House {
             </div>
             <div class="">
               <div class="p-2">
-                <h2>$${this.priceAsCurrency}</h2>
-                <p class="fs-5">${this.bedrooms} | ${this.bathrooms} | ${this.sqft} | ${this.year}</p>
+                <h2><strong>$${this.priceAsCurrency}</strong></h2>
+                <p class="fs-5"><strong>${this.bedrooms}</strong> bds | <strong>${this.bathrooms}</strong> ba | <strong>${this.sqftWComma}</strong> sqft</p>
+                <p>Constructed in <strong>${this.year}</strong></p>
                 <p>${this.description}</p>
               </div>
             </div>
@@ -33,5 +34,9 @@ export class House {
 
   get priceAsCurrency() {
     return new Intl.NumberFormat().format(this.price)
+  }
+
+  get sqftWComma() {
+    return new Intl.NumberFormat().format(this.sqft)
   }
 }

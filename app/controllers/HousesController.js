@@ -15,4 +15,9 @@ export class HousesController {
     const housesElem = document.getElementById('house-listings')
     housesElem.innerHTML = houseHTMLContent
   }
+
+  createHouse() {
+    event.preventDefault()
+    console.log('creating car listing')
+  }
 }
