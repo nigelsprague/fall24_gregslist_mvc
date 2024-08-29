@@ -20,9 +20,11 @@ export class HousesController {
 
   createHouse() {
     event.preventDefault()
-    console.log('creating car listing')
     const form = event.target
-    const houseFormData = getFormData(form)
-    housesService.createHouse(houseFormData)
+    const houseDataFromForm = getFormData(form)
+
+    console.log(houseDataFromForm)
+    housesService.createHouse(houseDataFromForm)
   }
+
 }
